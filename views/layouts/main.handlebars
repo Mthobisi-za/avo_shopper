@@ -19,10 +19,18 @@
                 </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+
+                   
                 </a>
+                <div class="hidden">
+                      <p aria-hidden="false"><a href="/" class="navbar-item"> Home</a></p>
+                        <p aria-hidden="false"><a href="/deals" class="navbar-item">Deals</a></p>
+                        <p aria-hidden="false"><a href="/add/deal" class="navbar-item">Add New Deal</a></p>
+                        <p> <a href="/add/shop" class="navbar-item">Add New Shop</a></p>
+                </div>
             </div>
 
             <div id="navbarBasicExample" class="navbar-menu">
@@ -65,5 +73,22 @@
 
     {{{body}}}
 </body>
-
+<script>
+    var burger = document.querySelector('.navbar-burger');
+    var count = 0;
+    burger.addEventListener('click', ()=>{
+        console.log(burger)
+        var div =document.querySelector('.hidden');
+        console.log(div)
+        div.style.display = 'block';
+        if(count === 0){
+            count++
+            div.style.display = 'block';
+        }else{
+            count--
+            div.style.display = 'none';
+        }
+        
+    })
+</script>
 </html>

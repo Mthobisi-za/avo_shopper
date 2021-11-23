@@ -1,0 +1,16 @@
+.hidden {
+    position: absolute;
+    left: -0px;
+    display: none;
+    gap: 5%;
+    height: 250px;
+    background-color: lightgray;
+    min-width: 50%;
+    text-align: center;
+}
+
+.show {
+    position: absolute;
+    left: 0px;
+    display: block;
+}

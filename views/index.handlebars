@@ -3,8 +3,10 @@
     <div class="blocks">
         <h1 class="subtitle">Home</h1>
     </div> <br> <br>
-    <div class="columns is-mobile">
+    <div class="flow">
         {{#each data}}
+        <div class="column is-mobile">
+        
             <div class="column">
             <div class="card ">
                 <div class="card-image">
@@ -19,17 +21,23 @@
                 </div>
             </div>
         </div>
-        {{/each}}
+        
+    </div>{{/each}}
     </div>
+    
 </div>
 
 <style>
     .columns{
-        width: 80%;
+        width: 100%;
+    }
+    .flow{
         margin: auto;
+        display: flex;
+        flex-wrap: wrap;
     }
     .column{
-        max-width: 20%;
+        max-width: 100%;
         height: auto;
     }
      .blocks {
