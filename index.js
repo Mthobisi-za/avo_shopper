@@ -31,6 +31,7 @@ let counter = 0;
 const shopper = require('./avo-shopper')(pool);
 app.get('/', async function(req, res) {
     var data = await shopper.topFiveDeals();
+    console.log(data)
     res.render('index', {
         data
     });
