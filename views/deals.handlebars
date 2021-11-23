@@ -1,0 +1,54 @@
+<br>
+<div class="tabs is-centered">
+  <ul>
+ <!---   <li class="is-active"><a>Pictures</a></li>--->
+    <li class="is-active first"><a>Get Deals by shop</a></li>
+    <li class="second"><a>Get Deals based on your capital</a></li>
+  </ul>
+</div>
+<div class="container is-centered lists">
+    <br> <br>
+    <h1 class="title" style="text-align: center;">Shops Lists</h1> <br> <br>
+    <div class="block has-background-light">
+        <div class="tabs is-centered">
+             <ul>
+            {{#each shops}}
+                <li><a href="/shop/{{this.name}}">{{this.name}}</a></li>
+            {{/each}}
+        </ul>
+        </div>
+       
+    </div>
+</div>
+
+<div class="container has-background-light has-text-centered list2"> <br> <br>
+    <div class="form">
+        <form action="/amount" method="post">
+        <h1 class="title">Add Amount</h1> <br>
+        <label for="shopname">Amount:</label> <br> <br>
+        <input type="number" name="amount" placeholder="20"> <br> <br>
+        <button type="submit" class="button is-info">Submit</button> <br> <br>
+    </form></div>
+</div>
+
+<script>
+    var list = document.querySelector('.lists');
+    var seclist = document.querySelector('.list2');
+
+    var lione = document.querySelector('.first')
+     var litwo = document.querySelector('.second')
+    list.style.display = 'block';
+    seclist.style.display = 'none';
+    litwo.addEventListener('click', ()=>{
+        document.querySelector('.lists').style.display = 'none';
+         document.querySelector('.list2').style.display = 'block';
+         document.querySelector('.second').classList.add('is-active');
+         document.querySelector('.first').classList.remove('is-active')
+    });
+    lione.addEventListener('click', ()=>{
+        document.querySelector('.lists').style.display = 'block';
+         document.querySelector('.list2').style.display = 'none';
+          document.querySelector('.second').classList.remove('is-active');
+         document.querySelector('.first').classList.add('is-active')
+    })
+</script>

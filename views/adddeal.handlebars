@@ -1,0 +1,18 @@
+<br> <br> <br>
+<div class="container has-background-light has-text-centered"> <br> <br>
+    <div class="form">
+        <form action="/newdeal" method="post">
+        <h1 class="title">Add New Deal</h1> <br>
+        <label for="price">Enter Price:</label>
+        <input type="number" name="price" placeholder="10.00"> <br> <br>
+        <label for="qty">Enter Qty:</label>
+        <input type="number" name="qty" placeholder="5"> <br> <br>
+        <label for="shop">Choose shop:</label>
+        <select name="shop" id="shop">
+            {{#each shops}}
+                <option value="{{this.name}}">{{this.name}}</option>
+            {{/each}}
+        </select> <br> <br>
+        <button type="submit" class="button is-info">Submit</button> <br> <br>
+    </form></div>
+</div>

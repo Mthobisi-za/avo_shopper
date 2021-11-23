@@ -1,7 +1,7 @@
 <br> <br>
 <div class="container">
     <div class="blocks">
-        <h1 class="subtitle">Home</h1>
+        <h1 class="subtitle">Details for {{shopName}}</h1>
     </div> <br> <br>
     <div class="columns is-mobile">
         {{#each data}}
@@ -13,9 +13,8 @@
                     </figure>
                 </div>
                 <div class="card-content">
-                    <p class="title is-4">{{this.name}}</p> <br>
-                    <p class="tittle is-5">R{{this.price}}</p>
-                    <p>QTY : {{this.qty}}    </p>
+                    <p class="title is-4">R{{this.price}}</p>
+                    <p>QTY: {{this.qty}}</p>
                 </div>
             </div>
         </div>
@@ -32,15 +31,27 @@
         max-width: 20%;
         height: auto;
     }
-     .blocks {
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .blocks {
         width: 40%;
         min-height: 40px;
         background-color: lightgray;
         margin: auto;
         text-align: center;
     }
+  
 </style>
-
-
-
-
+<script defer src="/js/images.js"></script>
